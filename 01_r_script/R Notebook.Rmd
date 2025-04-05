@@ -253,3 +253,13 @@ print(paste("Accuracy:", round(accuracy*100, 2), "%"))
 ::: {style="text-align: justify"}
 The model seems to perform reasonably well overall, with an accuracy of 84.85%. This confusion matrix provides valuable insights into the model's performance and can help guide further refinement or decision-making based on the model's predictions.
 :::
+
+**Important Features**
+
+```{r}
+# this shows which variables are in important or influential in my model
+importance <- mod$variable.importance
+importance_df <- data.frame(feature = names(importance), importance = importance)
+importance_df <- importance_df[order(-importance_df$importance),]
+print(importance_df)
+```
