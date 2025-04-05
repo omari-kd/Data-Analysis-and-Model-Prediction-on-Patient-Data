@@ -1,3 +1,4 @@
+# setwd("./data-science-projects/Data-Analysis-and-Model-Prediction-on-Patient-Data/")
 data1 <- data.frame(read.table("./00_raw_data/Data1.txt", header = T))  
 data2 <- data.frame(read.table("./00_raw_data/Data2.txt", header = T))
 
